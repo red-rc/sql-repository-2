@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost:3306
--- Час створення: Лип 04 2024 р., 16:38
+-- Час створення: Лип 12 2024 р., 16:47
 -- Версія сервера: 5.7.24
 -- Версія PHP: 8.3.1
 
@@ -78,17 +78,16 @@ CREATE TABLE `products` (
   `categoryId` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `priceInDollars` int(11) DEFAULT NULL,
-  `amount` int(10) UNSIGNED DEFAULT NULL,
-  `sale` tinyint(2) UNSIGNED DEFAULT NULL
+  `amount` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Дамп даних таблиці `products`
 --
 
-INSERT INTO `products` (`productId`, `categoryId`, `name`, `priceInDollars`, `amount`, `sale`) VALUES
-(3, 1, 'Samsung Galaxy S24 Ultra', 124, 15, 95),
-(4, 2, 'Зошит в клітинку 24 сторінки', 2, 156, NULL);
+INSERT INTO `products` (`productId`, `categoryId`, `name`, `priceInDollars`, `amount`) VALUES
+(1, 1, 'Samsung Galaxy S24 Ultra', 124, 15),
+(2, 2, 'Зошит в клітинку 24 сторінки', 2, 156);
 
 -- --------------------------------------------------------
 
@@ -190,7 +189,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT для таблиці `products`
 --
 ALTER TABLE `products`
-  MODIFY `productId` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `productId` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT для таблиці `reviews`
